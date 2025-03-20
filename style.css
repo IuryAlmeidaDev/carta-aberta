@@ -1,6 +1,5 @@
-/* Estilos gerais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Pacifico', cursive;
     margin: 0;
     padding: 0;
     background: #ffe5ec;
@@ -10,7 +9,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Contêiner */
 .container {
     width: 90%;
     max-width: 600px;
@@ -19,7 +17,6 @@ body {
     min-height: 100vh;
 }
 
-/* Seção inicial */
 .intro {
     height: 100vh;
     display: flex;
@@ -52,7 +49,6 @@ body {
     margin-top: 20px;
 }
 
-/* Animação de fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -62,7 +58,6 @@ body {
     }
 }
 
-/* Seções de mensagem */
 .message, .quote, .cta {
     opacity: 0;
     transform: translateY(50px);
@@ -90,7 +85,6 @@ body {
     color: #ff477e;
 }
 
-/* Citação */
 .quote blockquote {
     font-size: 1.5em;
     font-style: italic;
@@ -101,7 +95,6 @@ body {
     margin: 0 15px;
 }
 
-/* Animação do botão "Role para baixo" */
 @keyframes bounce {
     from {
         transform: translateY(0);
@@ -111,13 +104,11 @@ body {
     }
 }
 
-/* Classe visível (usada no JS) */
 .visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Container do botão de música */
 .music-container {
     position: fixed;
     top: 20px;
@@ -127,7 +118,6 @@ body {
     transition: opacity 1s ease-out;
 }
 
-/* Botão de coração */
 .heart-button {
     font-size: 2.5em;
     border: none;
@@ -137,19 +127,16 @@ body {
     animation: pulse 1.5s infinite;
 }
 
-/* Animação do coração batendo */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
 }
 
-/* Efeito ao clicar */
 .heart-button:active {
     transform: scale(0.9);
 }
 
-/* Mensagem para apertar o botão */
 .music-text {
     font-size: 1.2em;
     color: #ff477e;
@@ -158,7 +145,6 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Media queries para responsividade */
 @media (max-width: 768px) {
     .intro h1 {
         font-size: 1.5em;
@@ -215,17 +201,16 @@ body {
     .music-text {
         font-size: 1em;
     }
-    
 }
-/* Seção do GIF */
+
 .gif-section {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 2s ease-out, transform 2s ease-out;
-    min-height: 80vh; /* Mesmo altura mínima das outras seções */
+    min-height: 80vh;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    align-items: center;
     padding: 50px 0;
 }
 
@@ -234,9 +219,15 @@ body {
     transform: translateY(0);
 }
 
-/* Estilo do GIF */
 .gif {
-    max-width: 100%; /* Garante responsividade */
-    height: auto; /* Mantém a proporção */
-    max-height: 300px; /* Limita a altura máxima, ajuste conforme necessário */
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+.intro p {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
 }
