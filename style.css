@@ -30,32 +30,36 @@ body {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 2s ease-out, transform 2s ease-out;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.intro.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro h1 {
+    font-size: 2em;
+    color: #ff477e;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .intro p {
     font-size: 1em;
     color: #ff477e;
-    animation: bounce 1.5s infinite alternate;
+    animation: fadeIn 2.5s ease-in-out;
+    margin-top: 20px;
 }
 
-/* Efeito de typing */
-.typing {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #ff477e;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    display: inline-block;
-    max-width: 100%; /* Para responsividade */
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #ff477e }
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Seções de mensagem */
@@ -154,31 +158,29 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Animação de fade-in */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 /* Media queries para responsividade */
 @media (max-width: 768px) {
     .intro h1 {
         font-size: 1.5em;
     }
-    
+
+    .intro p {
+        font-size: 1em;
+    }
+
     .message h2, .quote blockquote, .cta h2 {
         font-size: 1.6em;
     }
-    
+
     .message p, .cta p, .music-text {
         font-size: 1.1em;
     }
-    
+
     .quote blockquote {
         font-size: 1.3em;
         padding: 15px;
     }
-    
+
     .heart-button {
         font-size: 2em;
     }
@@ -188,25 +190,30 @@ body {
     .intro h1 {
         font-size: 1.3em;
     }
-    
+
+    .intro p {
+        font-size: 0.9em;
+    }
+
     .message h2, .quote blockquote, .cta h2 {
         font-size: 1.4em;
     }
-    
+
     .message p, .cta p {
         font-size: 1em;
     }
-    
+
     .quote blockquote {
         font-size: 1.1em;
         padding: 12px;
     }
-    
+
     .heart-button {
         font-size: 1.8em;
     }
-    
+
     .music-text {
         font-size: 1em;
     }
+    
 }
