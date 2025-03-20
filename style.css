@@ -217,3 +217,26 @@ body {
     }
     
 }
+/* Seção do GIF */
+.gif-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    min-height: 80vh; /* Mesmo altura mínima das outras seções */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 50px 0;
+}
+
+.gif-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo do GIF */
+.gif {
+    max-width: 100%; /* Garante responsividade */
+    height: auto; /* Mantém a proporção */
+    max-height: 300px; /* Limita a altura máxima, ajuste conforme necessário */
+}
